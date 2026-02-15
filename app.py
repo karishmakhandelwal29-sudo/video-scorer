@@ -39,7 +39,7 @@ if uploaded_file is not None:
                     video_file = genai.get_file(video_file.name)
 
                 # 4. THE PROMPT: Our "Master Instructions"
-                model = genai.GenerativeModel("gemini-1.5-flash")
+                model = genai.GenerativeModel("gemini-2.5-flash")
                 prompt = """
                 Analyze this video as a high-end social media coach. 
                 Provide a score from 1-100 and give feedback on:
