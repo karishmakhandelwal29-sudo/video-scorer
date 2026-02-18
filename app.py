@@ -1,4 +1,14 @@
 import streamlit as st
+
+if not st.user.is_logged_in:
+    st.title("Welcome to CreatorScore AI")
+    st.write("Please log in to analyze your videos.")
+    if st.button("Log in with Google"):
+        st.login()
+    st.stop()
+
+st.write(f"Hello, {st.user.name}! Ready for a viral score?")
+# ... (rest of your video upload code here)
 import google.generativeai as genai
 import time
 from pathlib import Path
